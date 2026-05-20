@@ -46,6 +46,8 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
     });
   };
 
+  const isExternalImage = (src: string) => /^https?:\/\//.test(src);
+
   return (
     <>
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -60,14 +62,25 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
             type="button"
           >
             <div className="project-gallery-card__media aspect-[4/3]">
-              <Image
-                alt={item.alt}
-                className="project-gallery-card__image h-full w-full object-cover"
-                fill
-                loading="lazy"
-                sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                src={item.src}
-              />
+              {isExternalImage(item.src) ? (
+                // External Wikimedia redirects can fail through next/image's optimizer.
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  alt={item.alt}
+                  className="project-gallery-card__image h-full w-full object-cover"
+                  loading="lazy"
+                  src={item.src}
+                />
+              ) : (
+                <Image
+                  alt={item.alt}
+                  className="project-gallery-card__image h-full w-full object-cover"
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  src={item.src}
+                />
+              )}
             </div>
 
             <div className="project-gallery-card__caption p-5 sm:p-6">

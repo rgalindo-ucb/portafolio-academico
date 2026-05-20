@@ -139,23 +139,15 @@ export function ProjectCard({
             <p className="text-sm leading-7 text-muted-foreground">
               {project.description}
             </p>
-            <motion.div
-              className="mt-5 flex flex-wrap gap-2"
-              initial={false}
-              whileHover={prefersReducedMotion ? undefined : "hover"}
-            >
+            <div className="mt-5 flex flex-wrap gap-2">
               {project.tags.slice(0, 4).map((tag) => (
-                <motion.span
-                  key={tag}
-                  transition={{ duration: 0.25 }}
-                  variants={{ hover: { y: -2 } }}
-                >
+                <span key={tag}>
                   <Badge className={theme ? "subject-badge" : undefined} variant="outline">
                     {tag}
                   </Badge>
-                </motion.span>
+                </span>
               ))}
-            </motion.div>
+            </div>
             <div
               className={cn(
                 "mt-auto flex items-center justify-between gap-4 pt-8 text-sm font-medium text-primary",

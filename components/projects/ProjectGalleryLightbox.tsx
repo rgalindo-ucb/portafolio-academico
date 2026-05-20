@@ -28,6 +28,7 @@ export function ProjectGalleryLightbox({
   const [mounted, setMounted] = useState(false);
   const activeItem = items[activeIndex];
   const hasMultipleItems = items.length > 1;
+  const isExternalImage = (src: string) => /^https?:\/\//.test(src);
 
   useEffect(() => {
     setMounted(true);
@@ -129,13 +130,23 @@ export function ProjectGalleryLightbox({
 
           <div className="project-lightbox__media-wrap">
             <div className="project-lightbox__image-frame">
-              <Image
-                alt={activeItem.alt}
-                className="project-lightbox__image"
-                fill
-                sizes="100vw"
-                src={activeItem.src}
-              />
+              {isExternalImage(activeItem.src) ? (
+                // External Wikimedia redirects can fail through next/image's optimizer.
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  alt={activeItem.alt}
+                  className="project-lightbox__image h-full w-full"
+                  src={activeItem.src}
+                />
+              ) : (
+                <Image
+                  alt={activeItem.alt}
+                  className="project-lightbox__image"
+                  fill
+                  sizes="100vw"
+                  src={activeItem.src}
+                />
+              )}
             </div>
           </div>
 
