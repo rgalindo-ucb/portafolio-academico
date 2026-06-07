@@ -10,7 +10,7 @@ import { subjects } from "@/data/subjects";
 const contactLinks = [
   {
     label: "Correo",
-    href: "mailto:estudiante@example.com",
+    href: "mailto:rgalindomerida@gmail.com",
     icon: Mail,
   },
   {

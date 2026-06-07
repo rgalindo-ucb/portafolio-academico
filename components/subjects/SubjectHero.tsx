@@ -54,7 +54,7 @@ export function SubjectHero({ subject, index }: SubjectHeroProps) {
           <AnimatedText
             as="h1"
             text={subject.name}
-            className="font-editorial mt-8 max-w-5xl text-5xl font-normal leading-none text-white sm:text-7xl lg:text-8xl"
+            className="font-editorial mt-8 max-w-5xl text-5xl font-normal leading-snug text-white sm:text-7xl lg:text-8xl"
           />
 
           <Reveal delay={0.16}>

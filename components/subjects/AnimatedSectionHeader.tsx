@@ -60,7 +60,7 @@ export function AnimatedSectionHeader({
             whileInView={prefersReducedMotion ? undefined : { scaleX: 1, opacity: 1 }}
           />
         </div>
-        <h2 className="font-editorial mt-5 max-w-4xl text-4xl font-normal leading-none sm:text-6xl">
+        <h2 className="font-editorial mt-5 max-w-4xl text-4xl font-normal leading-snug sm:text-6xl">
           {title}
         </h2>
         {description ? (

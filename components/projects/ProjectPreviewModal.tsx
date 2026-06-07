@@ -262,7 +262,7 @@ export function ProjectPreviewModal({
 
                 <motion.h2
                   id={`project-preview-title-${project.id}`}
-                  className="font-editorial mt-7 text-4xl font-normal leading-none text-foreground sm:text-5xl"
+                  className="font-editorial mt-7 text-4xl font-normal leading-snug text-foreground sm:text-5xl"
                   variants={itemVariants}
                 >
                   {project.title}

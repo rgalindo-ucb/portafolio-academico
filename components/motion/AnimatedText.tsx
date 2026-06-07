@@ -63,7 +63,7 @@ export function AnimatedText({
       {words.map((currentWord, index) => (
         <motion.span
           aria-hidden="true"
-          className="inline-block overflow-hidden align-top"
+          className="inline-block overflow-visible pb-[0.12em] align-top"
           key={`${currentWord}-${index}`}
           variants={word}
         >

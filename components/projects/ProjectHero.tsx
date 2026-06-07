@@ -71,7 +71,7 @@ export function ProjectHero({
             <AnimatedText
               as="h1"
               text={project.title}
-              className="font-editorial mt-7 max-w-5xl text-4xl font-normal leading-none text-[var(--subject-text)] sm:text-6xl lg:text-7xl"
+              className="font-editorial mt-7 max-w-5xl text-4xl font-normal leading-snug text-[var(--subject-text)] sm:text-6xl lg:text-7xl"
             />
 
             <Reveal delay={0.14}>

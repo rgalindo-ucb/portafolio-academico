@@ -39,7 +39,7 @@ export function SectionHeading({
         </Reveal>
         <AnimatedText
           text={title}
-          className="font-editorial mt-5 max-w-4xl text-4xl font-normal leading-none text-foreground sm:text-6xl"
+          className="font-editorial mt-5 max-w-4xl text-4xl font-normal leading-snug text-foreground sm:text-6xl"
         />
       </div>
 
