@@ -1,7 +1,6 @@
 import { Briefcase, Github, Heart, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 
 import { AnimatedText } from "@/components/motion/AnimatedText";
-import { ParallaxBlock } from "@/components/motion/ParallaxBlock";
 import { Reveal } from "@/components/motion/Reveal";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -74,7 +73,7 @@ export function HeroSection() {
               <img
                 src="/portfolio/Headshot.png"
                 alt="Foto personal de Rodrigo Galindo"
-                className="h-72 w-full object-cover object center"
+                className="h-72 w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             </div>

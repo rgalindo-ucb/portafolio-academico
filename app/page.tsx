@@ -1,5 +1,4 @@
 import { SectionReveal } from "@/components/motion/SectionReveal";
-import { CrossLearningSection } from "@/components/sections/CrossLearningSection";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HomeFinalReflection } from "@/components/sections/HomeFinalReflection";
