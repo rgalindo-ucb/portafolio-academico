@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Footer />
           </div>
         </SmoothScrollProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
